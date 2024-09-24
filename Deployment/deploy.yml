@@ -1,16 +1,25 @@
 ---
-- name: Pull Docker Image of Calculator
+- name: Deploy Calculator Application
   hosts: all
   vars:
     ansible_python_interpreter: /usr/bin/python3
+  become: true
   tasks:
-    - name: Pull image
-      docker_image:
-        name: kevinadesara/calculator:latest
-        source: pull
-    - name: Start docker service
+    - name: Start Docker service
       service:
         name: docker
         state: started
-    - name: Running container
-      shell: docker run -it -d --name Calculator kevinadesara/calculator
+
+    - name: Pull Calculator Docker image
+      docker_image:
+        name: kevinadesara/calculator:latest
+        source: pull
+
+    - name: Ensure Calculator container is running
+      docker_container:
+        name: Calculator
+        image: kevinadesara/calculator:latest
+        state: started
+        restart_policy: unless-stopped
+        detach: true
+        tty: true
