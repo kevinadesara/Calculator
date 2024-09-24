@@ -4,6 +4,7 @@
   gather_facts: yes
   vars:
     ansible_python_interpreter: /usr/bin/python3
+    ansible_become_method: sudo
   tasks:
     - name: Install Docker SDK for Python
       become: true
