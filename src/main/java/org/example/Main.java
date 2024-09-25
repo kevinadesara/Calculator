@@ -15,7 +15,7 @@ public class Main {
         int flg = 0;
         int ch;
         double num;
-        System.out.println("----------Scientific Calculator----------");
+        System.out.println("-----------Scientific Calculator-----------");
 
         while (flg == 0) {
             try {
