@@ -15,7 +15,7 @@ public class Main {
         int flg = 0;
         int ch;
         double num;
-        System.out.println("-----------Scientific Calculator-----------");
+        System.out.println("----------Scientific Calculator----------");
 
         while (flg == 0) {
             try {
@@ -33,21 +33,21 @@ public class Main {
                         System.out.println("You chose Square Root!");
                         System.out.print("Enter the operand: ");
                         num = sc.nextDouble();
-                        System.out.println("Result is: " + SquareRoot(num));
+                        System.out.println("Result is: " + SquareRoot(num) + "\n");
                         break;
 
                     case 2:
                         System.out.println("You chose Factorial!");
                         System.out.print("Enter the operand: ");
                         int numFact = sc.nextInt();
-                        System.out.println("Result is: " + Factorial(numFact));
+                        System.out.println("Result is: " + Factorial(numFact) + "\n");
                         break;
 
                     case 3:
                         System.out.println("You chose Natural Logarithm!");
                         System.out.print("Enter the operand: ");
                         num = sc.nextDouble();
-                        System.out.println("Result is: " + NaturalLog(num));
+                        System.out.println("Result is: " + NaturalLog(num) + "\n");
                         break;
 
                     case 4:
@@ -56,11 +56,11 @@ public class Main {
                         double base = sc.nextDouble();
                         System.out.print("Enter the exponent: ");
                         double exponent = sc.nextDouble();
-                        System.out.println("Result is: " + Power(base, exponent));
+                        System.out.println("Result is: " + Power(base, exponent) + "\n");
                         break;
 
                     case 5:
-                        System.out.println("Exiting... Goodbye!");
+                        System.out.println("Exiting... Goodbye!\n");
                         flg = 1;
                         break;
 
